@@ -52,7 +52,7 @@ if __name__ == '__main__':
     try:
         port = int(sys.argv[1]) # This is for a command-line argument
     except:
-        port = 12345 # If you don't provide any port then the port will be set to 12345
+        port = 1313 # If you don't provide any port then the port will be set to 12345
     logit = joblib.load('model.pkl') # Load "model.pkl"
     print ('Model loaded')
     model_columns = joblib.load('model_columns.pkl') # Load "model_columns.pkl"
