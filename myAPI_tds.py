@@ -19,12 +19,13 @@ def predict():
     ##list of parameters data comes through here, looping through list of request json
     ## create a loop
     json_ = request.get_json(force = "True")
-    print("hi", json_, )
+    df = pd.DataFrame(json_, index = [0])
+    print(df)
 
     ##analyze and write comments
 
-    prediction = list(final_logit.predict(json_))
-
+    prediction = list(final_logit.predict(df))
+    print(prediction)
 
     final = 0
     if prediction[0] < .5: 
